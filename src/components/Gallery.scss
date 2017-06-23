@@ -1,0 +1,93 @@
+.Gallery {
+  padding: 20px;
+  box-sizing: border-box;
+
+  ul, li {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  > ul {
+
+    > li {
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+      border-radius: 3px;
+      background-color: #888;
+      background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPGRlZnM+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDMwIDIwJz4KCQkJPHBhdGggZD0nTTAsMTBoNWw1LC0xMGgxMGw1LDEwaDVtLTUsMGwtNSwxMGgtMTBsLTUsLTEwJyBzdHJva2U9JyMwMDEnIHN0cm9rZS13aWR0aD0nLjUnIGZpbGwtb3BhY2l0eT0nMCcgLz4KCQk8L3BhdHRlcm4+CgkJPHJhZGlhbEdyYWRpZW50IGlkPSdnJyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzUwJScgY3k9JzUwJScgcj0nNjAlJyBmeD0nMjYlJyBmeT0nMzIlJz4KCQkJPHN0b3Agb2Zmc2V0PScwJScgc3RvcC1vcGFjaXR5PScwJyBzdG9wLWNvbG9yPScjODg4JyAvPgoJCQk8c3RvcCBvZmZzZXQ9JzEwMCUnIHN0b3Atb3BhY2l0eT0nLjknIHN0b3AtY29sb3I9JyMyMjInIC8+CgkJPC9yYWRpYWxHcmFkaWVudD4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYyknLz4KCTxyZWN0IHdpZHRoPScxMjAlJyB4PSctMTAlJyB5PSctMTAlJyBoZWlnaHQ9JzEyMCUnIGZpbGw9J3VybCgjZyknLz4KPC9zdmc+);
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,.31);
+
+      > div > label {
+        padding: 3px 46px;
+        background: white;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .cards {
+    display: inline-block;
+  }
+
+  .card {
+    margin: 10px;
+    width: 120px;
+    height: 194px;
+    float: left;
+    border-radius: 3px;
+    background-color: red;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.31);
+
+    > div {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    label {
+      font-size: 10px;
+      padding: 2px 5px;
+      background: white;
+      margin-top: 5px;
+      border-radius: 2px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+        left: 50%;
+        margin-left: -5px;
+        margin-top: -5px;
+        opacity: 0.7;
+      }
+    }
+
+    .bus {
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+      background: dimgray;
+      margin-top: 10px;
+
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      display: inline-block;
+    }
+  }
+
+  > ul > li:nth-of-type(2n) {
+    .card {
+      .bus:nth-of-type(2n) {
+        background: darkorange;
+      }
+    }
+  }
+}

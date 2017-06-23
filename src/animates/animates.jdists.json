@@ -1,0 +1,14 @@
+<!--remove-->
+  <!--jdists encoding="glob" pattern="../../node_modules/animate.css/source/*/*.css" export="#files" /-->
+<!--/remove-->
+<!--jdists encoding="jhtmls" data="#files" -->
+var fs = require('fs');
+var path = require('path');
+var result = {};
+forEach(function (filename) {
+  filename = path.relative('../../', filename);
+  var key = filename.replace(/.*\/([^\/]+\/[^\/]+)\.css$/, '$1');
+  result[key] = String(fs.readFileSync(filename));
+});
+!#{JSON.stringify(result)}
+<!--/jdists-->
