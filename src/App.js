@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import '../node_modules/animate.css/animate.css';
 import Gallery from './components/Gallery';
 import { ToastContainer, toast } from 'react-toastify';
 
